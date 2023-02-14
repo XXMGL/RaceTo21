@@ -71,8 +71,12 @@ namespace RaceTo21
                 {
                     if (cardTable.OfferACard(player))
                     {
-                        Card card = deck.DealTopCard();          
-                        player.cards.Add(card);
+                        int Num = cardTable.OfferNumber(player);
+                        for(int i=0; i<Num; i++)
+                        {
+                            Card card = deck.DealTopCard();
+                            player.cards.Add(card);
+                        }
                         player.score = ScoreHand(player);
                         if (player.score > 21)
                         {
@@ -112,6 +116,15 @@ namespace RaceTo21
             }
             else if(nextTask == "NextRound")
             {
+                clearScore();
+                foreach(var player in players)
+                {
+                    int Num = player.cards.Count;
+                    for (int i = 0;i< Num; i++)
+                        {
+                            player.cards.RemoveAt(0);
+                        }
+                }
                 if (!CheckWinner())
                 {
                     AskPlayer();//Ask for whether keep playing
@@ -135,6 +148,8 @@ namespace RaceTo21
                 else
                 {
                     Player Winer = FindWinner();//Find the player with the highest score
+                    cardTable.AnnounceFinalWinner(Winer);
+                    nextTask = "GameOver";
                 }
                 
             }
@@ -238,8 +253,7 @@ namespace RaceTo21
                     {
                         highScore = player.score;
                     }
-                }
-             
+                }            
                 // if busted don't bother checking!
             }
             if (highScore >= 0) // someone scored, anyway!
@@ -250,6 +264,15 @@ namespace RaceTo21
            
             return null; // everyone must have busted because nobody won!
         }
+
+        public void clearScore()
+        {
+            foreach(var player in players)
+            {
+                player.score = 0;
+            }
+        }
+     
 
         public void AskPlayer()//ask player for whether keep playing
         {

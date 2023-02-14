@@ -27,6 +27,7 @@ namespace RaceTo21
 		{
 			Console.WriteLine(name+":"+point+"points");
 		}
+
 	}
 }
 

@@ -82,6 +82,27 @@ namespace RaceTo21
             }
         }
 
+        public int OfferNumber(Player player)
+        {
+            while (true)
+            {
+                Console.Write(player.name + ", how many cards do you want? (1 to 3)");
+                string Num = Console.ReadLine();
+                switch (Num)
+                {
+                    case "1":
+                        return 1;
+                    case "2":
+                        return 2;
+                    case "3":
+                        return 3;
+                    default:
+                        Console.Write("Please input a valid number");
+                        break;
+                }
+            }
+        }
+
         public void ShowHand(Player player)
         {
             if (player.cards.Count > 0)
@@ -132,7 +153,7 @@ namespace RaceTo21
         //announce the winner of this game
         public void AnnounceFinalWinner(Player player)
         {
-            Console.WriteLine(player.name+"win this game!");
+            Console.WriteLine(player.name+" win this game!");
         }
 
         //return true when player want to keep playing
