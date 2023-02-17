@@ -5,11 +5,11 @@ namespace RaceTo21
 {
 	public class Player
 	{
-		public string name;
-		public List<Card> cards = new List<Card>();
-		public PlayerStatus status = PlayerStatus.active;
-		public int score;
-		public int point;
+		public string name;//The name of the player
+		public List<Card> cards = new List<Card>();//Player's hand
+		public PlayerStatus status = PlayerStatus.active;//intialize the player's status to ensure that they are active at the beginning
+		public int score;//the player's score
+		public int point;//the player's points
 
 		public Player(string n)
 		{
@@ -23,9 +23,12 @@ namespace RaceTo21
 		{
 			Console.WriteLine("Hello, my name is " + name + " and I am player #" + playerNum);
 		}
+		/* Show player's point
+	  * Called by CardTable and Game object
+	  */
 		public void ShowPoint()
 		{
-			Console.WriteLine(name+":"+point+"points");
+			Console.WriteLine(name+":"+point+" coins");
 		}
 
 	}

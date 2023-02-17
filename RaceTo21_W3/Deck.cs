@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq; // currently only needed if we use alternate shuffle method
+using System.Linq; // for using alternate shuffle method
 
 namespace RaceTo21
 {
     public class Deck
     {
         List<Card> cards = new List<Card>();
-
+        /*Building a deck
+        * Is called by Game object.
+        */
         public Deck()
         {
             Console.WriteLine("*********** Building deck...");
-            string[] suits = { "Spades", "Hearts", "Clubs", "Diamonds" };
+            string[] suits = { "Spades", "Hearts", "Clubs", "Diamonds" };//create an array that contain the name of each face card
 
-            for (int cardVal = 1; cardVal <= 13; cardVal++)
+            for (int cardVal = 1; cardVal <= 13; cardVal++)//keep looping until all card value has been included
             {
-                foreach (string cardSuit in suits)
+                foreach (string cardSuit in suits)//keep looping until all card value including J,Q,K,A are included
                 {
                     string cardName;
                     string cardLongName;
-                    switch (cardVal)
+                    switch (cardVal)//change the number into the card's name
                     {
                         case 1:
                             cardName = "A";
@@ -38,28 +40,26 @@ namespace RaceTo21
                             cardLongName = "King";
                             break;
                         default:
-                            cardName = cardVal.ToString();
+                            cardName = cardVal.ToString();//convert the integer to string
                             cardLongName = cardName;
                             break;
                     }
-                    cards.Add(new Card(cardName + cardSuit.First<char>(), cardLongName + "of"+cardSuit));
+                    cards.Add(new Card(cardName +" "+cardSuit.First<char>(), cardLongName + " of "+cardSuit));//Add each card to the list
                 }
             }
         }
 
+        /* Shuhffling the deck
+       * Is called by Game object.
+       */
         public void Shuffle()
         {
             Console.WriteLine("Shuffling Cards...");
 
-            Random rng = new Random();
-
-            // one-line method that uses Linq:
-            // cards = cards.OrderBy(a => rng.Next()).ToList();
-
-            // multi-line method that uses Array notation on a list!
-            // (this should be easier to understand)
+            Random rng = new Random();//creating a random number
             for (int i=0; i<cards.Count; i++)
             {
+                //change the position of randomly two cards
                 Card tmp = cards[i];
                 int swapindex = rng.Next(cards.Count);
                 cards[i] = cards[swapindex];
@@ -67,32 +67,14 @@ namespace RaceTo21
             }
         }
 
-        /* Maybe we can make a variation on this that's more useful,
-         * but at the moment it's just really to confirm that our 
-         * shuffling method(s) worked! And normally we want our card 
-         * table to do all of the displaying, don't we?!
-         */
-
-        public void ShowAllCards()
-        {
-            for (int i=0; i<cards.Count; i++)
-            {
-                Console.Write(i+":"+cards[i].displayName); // a list property can look like an Array!
-                if (i < cards.Count -1)
-                {
-                    Console.Write(" ");
-                } else
-                {
-                    Console.WriteLine("");
-                }
-            }
-        }
-
+        /* get the last card in the deck and remove it from the deck
+       * Is called by Game object.
+       * card object provides list of players.
+       */
         public Card DealTopCard()
         {
-            Card card = cards[cards.Count - 1];
-            cards.RemoveAt(cards.Count - 1);
-            // Console.WriteLine("I'm giving you " + card);
+            Card card = cards[cards.Count - 1];//get the last card in the dec
+            cards.RemoveAt(cards.Count - 1);//remove the card
             return card;
         }
     }

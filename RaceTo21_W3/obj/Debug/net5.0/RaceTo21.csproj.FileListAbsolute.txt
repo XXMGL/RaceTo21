@@ -62,3 +62,19 @@ C:\Users\Aestuo\Desktop\RaceTo21_Jianzhuo Yu\RaceTo21_W3\obj\Debug\net5.0\RaceTo
 C:\Users\Aestuo\Desktop\RaceTo21_Jianzhuo Yu\RaceTo21_W3\obj\Debug\net5.0\ref\RaceTo21_W3.dll
 C:\Users\Aestuo\Desktop\RaceTo21_Jianzhuo Yu\RaceTo21_W3\obj\Debug\net5.0\RaceTo21_W3.pdb
 C:\Users\Aestuo\Desktop\RaceTo21_Jianzhuo Yu\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.genruntimeconfig.cache
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.exe
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.deps.json
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.runtimeconfig.json
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.runtimeconfig.dev.json
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.dll
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\ref\RaceTo21_W3.dll
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\bin\Debug\net5.0\RaceTo21_W3.pdb
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.csproj.AssemblyReference.cache
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.AssemblyInfoInputs.cache
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.AssemblyInfo.cs
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.csproj.CoreCompileInputs.cache
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21_W3.dll
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\ref\RaceTo21_W3.dll
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21_W3.pdb
+C:\Users\Aestuo\Desktop\RaceTo21-Final\RaceTo21_W3\obj\Debug\net5.0\RaceTo21.genruntimeconfig.cache
