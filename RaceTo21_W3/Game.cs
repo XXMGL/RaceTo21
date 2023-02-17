@@ -5,15 +5,15 @@ namespace RaceTo21
 {
     public class Game
     {
-        int numberOfPlayers; // number of players in current game
+        private int numberOfPlayers; // number of players in current game
         List<Player> players = new List<Player>(); // list of objects containing player data
         CardTable cardTable; // object in charge of displaying game information
         Deck deck = new Deck(); // deck of cards
-        int currentPlayer = 0; // current player on list
+        private int currentPlayer = 0; // current player on list
         public Task nextTask; // keeps track of game state
         private bool cheating = false; // lets you cheat for testing purposes if true
-        public int highScore;//The highest score in this round
-        public int round;//The number of round players attend.
+        private int highScore;//The highest score in this round
+        private int round;//The number of round players attend.
 
         public Game(CardTable c)
         {
